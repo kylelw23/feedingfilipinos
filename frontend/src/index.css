@@ -1,0 +1,488 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #111827;
+  background: #f8fafc;
+  line-height: 1.6;
+  font-size: 16px;
+  --bg: #fbf8f1;
+  --surface: #ffffff;
+  --surface-strong: #f2ece0;
+  --text: #111827;
+  --muted: #475569;
+  --brand: #166534;
+  --brand-soft: #dbe7d5;
+  --accent: #f59e0b;
+  --accent-soft: #fef3c7;
+  --border: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.site-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(251, 248, 241, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+  padding: 1rem 1.25rem;
+}
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--brand);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--text);
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.main-nav a {
+  color: var(--muted);
+  padding: 0.25rem 0.15rem;
+}
+
+.main-nav a.active {
+  color: var(--brand);
+  font-weight: 600;
+}
+
+.donate-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.2rem;
+  background: var(--brand);
+  color: white;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.site-main {
+  flex: 1;
+  padding: 1.5rem 1.25rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.site-footer {
+  padding: 1.5rem 1.25rem 2.5rem;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+  color: var(--muted);
+}
+
+.page-head {
+  margin-bottom: 1.5rem;
+}
+
+.hero-panel,
+.donation-panel,
+.story-detail-hero,
+.about-grid,
+.trust-grid,
+.cards-grid,
+.gallery-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero-panel {
+  grid-template-columns: minmax(0, 1fr);
+  margin-bottom: 2rem;
+}
+
+.hero-copy h2,
+.page-head h2,
+.story-detail-copy h2,
+.about-grid h3,
+.proof-section h3,
+.media-gallery h3 {
+  margin: 0 0 0.75rem;
+}
+
+.hero-copy p,
+.page-head p,
+.story-card-body p,
+.story-detail-copy p,
+.donation-trust p,
+.about-grid p,
+.contact-form p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.hero-media {
+  position: relative;
+}
+
+.hero-media img {
+  width: 100%;
+  display: block;
+  border-radius: 1rem;
+  object-fit: cover;
+  min-height: 320px;
+}
+
+.hero-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  border-radius: 1rem;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  padding: 1.25rem;
+  margin-top: -3rem;
+}
+
+.hero-card h3 {
+  margin: 0 0 0.5rem;
+}
+
+.trust-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.trust-grid article {
+  padding: 0.5rem 0;
+}
+
+.trust-grid h4 {
+  margin: 0 0 0.5rem;
+}
+
+.cards-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.story-card {
+  background: var(--surface);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.story-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.story-card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.story-location {
+  margin: 0;
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.story-progress {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.story-link,
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 1.2rem;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.button {
+  background: var(--surface-strong);
+  color: var(--text);
+  border: 1px solid transparent;
+}
+
+.button:hover,
+.story-link:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  background: var(--brand);
+  color: white;
+}
+
+.button-secondary {
+  background: var(--accent-soft);
+  color: #92400e;
+}
+
+.button-tertiary {
+  background: transparent;
+  color: var(--brand);
+  border: 1px solid var(--brand-soft);
+}
+
+.story-preview-section {
+  margin-top: 2rem;
+}
+
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.page-stories,
+.page-donate,
+.page-about,
+.page-contact,
+.page-story-detail {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.donation-panel {
+  grid-template-columns: 1.7fr 1fr;
+  gap: 1.5rem;
+}
+
+.donation-form,
+.donation-trust {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.donation-form label,
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.donation-form select,
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+  padding: 0.95rem 1rem;
+  margin-bottom: 1rem;
+  background: white;
+}
+
+.quick-amounts {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.amount-pill {
+  background: var(--brand-soft);
+  border: none;
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+}
+
+.donation-trust ul,
+.about-grid ul,
+.proof-section ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.about-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.about-grid article {
+  background: var(--surface);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-form button {
+  width: fit-content;
+}
+
+.contact-proof {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.story-detail-hero {
+  grid-template-columns: 1.25fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.story-detail-media img {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+  min-height: 320px;
+}
+
+.story-detail-badges {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.story-detail-badges span {
+  display: inline-flex;
+  padding: 0.75rem 1rem;
+  background: var(--brand-soft);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: var(--brand);
+}
+
+.story-detail-info {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.proof-section,
+.media-gallery {
+  background: var(--surface);
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+}
+
+.proof-section ul {
+  list-style: disc;
+}
+
+.gallery-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+  min-height: 160px;
+}
+
+.video-embed {
+  margin-top: 1rem;
+}
+
+@media (max-width: 900px) {
+  .hero-panel,
+  .donation-panel,
+  .story-detail-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .site-main {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-nav {
+    gap: 0.75rem;
+  }
+
+  .hero-copy h2,
+  .page-head h2,
+  .story-detail-copy h2 {
+    font-size: 1.6rem;
+  }
+
+  .story-detail-info {
+    grid-template-columns: 1fr;
+  }
+}
