@@ -2,42 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import stories from '../data/stories'
 import StoryCard from '../components/StoryCard'
+import StoryCarousel from '../components/StoryCarousel'
 
 const featured = stories[0]
 
 export default function Home() {
   return (
     <div className="page page-home">
-      <section className="hero-panel">
-        <div className="hero-copy">
-          <p className="eyebrow">Real Filipino families need real help</p>
-          <h2>Help a hardworking mother earn more with a tricycle.</h2>
-          <p>
-            Support families through personal stories, proof of impact, and a frictionless donation route.
-            Your gift reaches beneficiaries directly.
-          </p>
-          <div className="hero-buttons">
-            <Link className="button button-primary" to="/donate">
-              Donate now
-            </Link>
-            <Link className="button button-secondary" to="/stories">
-              Explore stories
-            </Link>
-          </div>
-        </div>
-
-        <div className="hero-media">
-          <img src={featured.heroImage} alt={featured.title} />
-          <div className="hero-card">
-            <p className="eyebrow">Featured story</p>
-            <h3>{featured.title}</h3>
-            <p>{featured.summary}</p>
-            <Link className="button button-tertiary" to={`/stories/${featured.id}`}>
-              Read the story
-            </Link>
-          </div>
-        </div>
-      </section>
+      <StoryCarousel stories={stories} />
 
       <section className="trust-grid">
         <article>

@@ -29,7 +29,7 @@ const stories = [
       'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80'
     ],
     video: 'https://www.youtube.com/watch?v=ysz5S6PUM-U',
-    donateLink: 'https://www.gofundme.com/f/trike-mother',
+    donateLink: 'https://www.gofundme.com/f/feeding-filipinos-mobile-trike-for-selfsufficiency',
     proof: ['Photos of the mother and children', 'Video updates from the family', 'Zoom call transparency meetings'],
     storyText: 'We are raising funds to support a hardworking Filipino mother who is caring for five children. Every day, she struggles to travel long distances just to reach work, often walking or relying on costly transportation. A tricycle would allow her to travel consistently. Any aid in helping to obtain this tricycle would help her earn steady income to provide food, school needs, and basic care for her children. Your support offers not just transportation, but hope for her children\'s futures. We offer TRANSPARENCY through photo, video, and Zoom call meetings to ensure and give proof that your contributions are going where they need to go.'
   },

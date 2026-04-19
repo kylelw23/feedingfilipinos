@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import stories from '../data/stories'
 
 export default function StoryDetail() {
   const { storyId } = useParams()
   const story = stories.find((item) => item.id === storyId)
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [storyId])
 
   if (!story) {
     return (
