@@ -22,11 +22,8 @@ export default function StoryCarousel({ stories }) {
           <p className="eyebrow">Featured case</p>
           <h3>{activeStory.title}</h3>
           <p>{activeStory.summary}</p>
-          <div className="carousel-meta">
-            <span>${activeStory.raised.toLocaleString()} raised</span>
-            <span>Goal ${activeStory.goal.toLocaleString()}</span>
-          </div>
           <div className="carousel-actions">
+
             <Link className="button button-primary" to={`/stories/${activeStory.id}`}>
               View story
             </Link>

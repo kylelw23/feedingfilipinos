@@ -47,6 +47,18 @@ export default function Donate() {
           </ul>
         </aside>
       </section>
+
+      <section className="donation-embed">
+        <h3>GoFundMe live preview</h3>
+        <div className="embed-frame">
+          <iframe
+            src={story.embedUrl}
+            title={`GoFundMe preview for ${story.title}`}
+            loading="lazy"
+            allowFullScreen
+          />
+        </div>
+      </section>
     </div>
   )
 }

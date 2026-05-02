@@ -22,8 +22,6 @@ export default function StoryDetail() {
     )
   }
 
-  const progress = Math.round((story.raised / story.goal) * 100)
-
   return (
     <div className="page page-story-detail">
       <section className="story-detail-hero">
@@ -31,16 +29,6 @@ export default function StoryDetail() {
           <p className="eyebrow">{story.location}</p>
           <h2>{story.title}</h2>
           <p>{story.storyText}</p>
-          <div className="story-detail-info">
-            <div>
-              <strong>${story.raised.toLocaleString()}</strong>
-              <span>raised of ${story.goal.toLocaleString()}</span>
-            </div>
-            <div>
-              <strong>{progress}%</strong>
-              <span>funded</span>
-            </div>
-          </div>
           <a className="button button-primary" href={story.donateLink} target="_blank" rel="noreferrer">
             Donate via GoFundMe
           </a>

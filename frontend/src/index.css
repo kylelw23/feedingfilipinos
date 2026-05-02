@@ -328,14 +328,6 @@ button {
   font-weight: 700;
 }
 
-.story-progress {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  font-size: 0.95rem;
-  color: var(--muted);
-}
-
 .story-link,
 .button {
   display: inline-flex;
@@ -448,6 +440,30 @@ button {
   color: var(--muted);
 }
 
+.donation-embed {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.donation-embed h3 {
+  margin-bottom: 1rem;
+}
+
+.embed-frame {
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+}
+
+.embed-frame iframe {
+  width: 100%;
+  min-height: 720px;
+  border: none;
+  display: block;
+}
+
 .about-grid {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
@@ -504,13 +520,6 @@ button {
   color: var(--brand);
 }
 
-.story-detail-info {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  margin: 1rem 0;
-}
-
 .proof-section,
 .media-gallery {
   background: var(--surface);
@@ -559,9 +568,5 @@ button {
   .page-head h2,
   .story-detail-copy h2 {
     font-size: 1.6rem;
-  }
-
-  .story-detail-info {
-    grid-template-columns: 1fr;
   }
 }
